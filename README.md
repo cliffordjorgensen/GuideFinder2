@@ -58,22 +58,20 @@ Express/Express-handlebars
 
 # to-do
  change 'todo' model to 'search' model. disconnect auth for search input. 
- 
-  
   
 ## Client
-*src
- *Components
-  *Pages
-   *Main.js
-   *Profiles.js
-    *Traveler.js
-    *Guide.js
-   *Contact.js
-   *Login.js
- *Partials
-  *Container
-   *Container.js
+src
+ Components
+  Pages
+   Main.js
+   Profiles.js
+    Traveler.js
+    Guide.js
+   Contact.js
+   Login.js
+ Partials
+  Container
+   Container.js
    
 ## Models
 Home
