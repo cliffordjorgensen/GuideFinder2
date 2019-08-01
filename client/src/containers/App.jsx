@@ -7,6 +7,7 @@ import Search from '../components/Search/Search';
 export default ({ children }) => {
   return (
     <>
+      <Search />
       <NavBar />
 
       <div className="container">
