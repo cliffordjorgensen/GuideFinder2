@@ -4,9 +4,11 @@ import NavBar from '../components/NavBar';
 
 export default ({ children }) => {
   return (
-    <div className="container">
+    <>
       <NavBar />
-      {children}
-    </div>
+      <div className="container">
+        {children}
+      </div>
+    </>
   )
 };
