@@ -1,3 +1,3 @@
-module.imports = {
+module.exports = {
     secret: 'gfggkdhdgkhfbjfdkfgbkdbgdfkgbkdfgbkdjfbgkjdfbgjk'
 }
