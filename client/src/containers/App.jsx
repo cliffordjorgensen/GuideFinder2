@@ -9,10 +9,18 @@ export default ({ children }) => {
     <>
       <Search />
       <NavBar />
+
       <div className="container">
         <GoogleMap />
+
         {children}
       </div>
+
+      <div className = "container">
+          <Search/>
+      </div>
+
+
     </>
   )
 };
