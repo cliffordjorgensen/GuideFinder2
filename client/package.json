@@ -15,7 +15,8 @@
         "redux": "^4.0.4",
         "redux-form": "^8.2.5",
         "redux-thunk": "^2.3.0",
-        "validator": "^11.1.0"
+        "validator": "^11.1.0",
+        "google-map-react": "^1.1.4"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -39,6 +40,6 @@
         ]
     },
     "devDependencies": {
-        "google-map-react": "^1.1.4"
+
     }
 }
