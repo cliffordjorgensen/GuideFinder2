@@ -5,7 +5,7 @@ import styles from './NavBar.module.css';
 const index = () => {
     return (
         <div>
-            <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+            <nav className='navbar navbar-expand-lg navbar-light bg-light' >
                 <ul>
                     <li className={styles.route}>
                         <Link to="/">Home</Link>
