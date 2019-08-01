@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import GoogleMap from '../components/GoogleMap';
 
 
 export default ({ children }) => {
@@ -7,6 +8,7 @@ export default ({ children }) => {
     <>
       <NavBar />
       <div className="container">
+        <GoogleMap />
         {children}
       </div>
     </>

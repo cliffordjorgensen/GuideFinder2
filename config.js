@@ -1,0 +1,3 @@
+module.imports = {
+    secret: 'gfggkdhdgkhfbjfdkfgbkdbgdfkgbkdfgbkdjfbgkjdfbgjk'
+}
