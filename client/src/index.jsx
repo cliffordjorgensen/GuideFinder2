@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 import  './styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // Import Containers
-import App from './containers/App';
+import App from './containers/App.jsx';
 import Counter from './containers/Counter';
 import Stuff from './containers/Stuff';
 import Signup from './containers/Signup';

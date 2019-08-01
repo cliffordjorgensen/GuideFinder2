@@ -16,6 +16,7 @@ export class MapContainer extends Component {
     }
   }
 
+
   displayMarkers = () => {
     return this.state.stores.map((store, index) => {
       return <Marker key={index} id={index} position={{
@@ -27,11 +28,15 @@ export class MapContainer extends Component {
   }
 
   render() {
+    const mapStyles = {
+      width: '66%',
+      height: '100%',
+    };
     return (
         <Map
             google={this.props.google}
             zoom={8}
-
+            style={mapStyles}
             initialCenter={{ lat: 47.444, lng: -122.176}}
         >
           {this.displayMarkers()}
