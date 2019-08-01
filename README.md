@@ -57,11 +57,36 @@ bootstrap
 Express/Express-handlebars
 
 # to-do
+ change 'todo' model to 'search' model. disconnect auth for search input. 
+  
+## Client
+src
+ Components
+  Pages
+   Main.js
+   Profiles.js
+    Traveler.js
+    Guide.js
+   Contact.js
+   Login.js
+ Partials
+  Container
+   Container.js
+   
+## Models
+Home
+  Map
+  Search input/button
+  Carousel
+  Cards
+  
+Nav-Bar 
+  Profiles
+  Login
+  Contact  
 
-Traveler will be able to create account with google/facebook.
-modal pops up to take payment info through paypal or other medium
-when the meeting happens the app should notify the guide and traveler that they are close to each other.
-Prompt the traveler for a guide rating(modal) after the tour/experience
+ work out state and components 
+ 
  
  
  

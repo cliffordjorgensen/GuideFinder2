@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
-
+import  './styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 // Import Containers
 import App from './containers/App';
 import Counter from './containers/Counter';
@@ -13,6 +14,7 @@ import Signup from './containers/Signup';
 import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Import components
 import Welcome from './components/Welcome';
