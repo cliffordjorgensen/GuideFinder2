@@ -1,22 +1,25 @@
-const express   = require('express');
-const morgan    = require('morgan');
-const mongoose  = require('mongoose');
-const cors      = require('cors');
+const express = require('express');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 
 // Database setupx
-mongoose.connect('mongodb://localhost:auth/auth', { useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect('mongodb://localhost:auth/auth', {
+  useNewUrlParser: true,
+  useCreateIndex: true
+});
 
 // Middlewares setup
 app.use(morgan('combined'));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // If we are in production serve our clients build  folder
 // This folder is created during production only
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
