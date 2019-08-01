@@ -20,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Welcome from './components/Welcome';
 
 import reducers from './reducers';
+import Search from './components/Search/Search';
 
 // configure redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -38,6 +39,7 @@ ReactDOM.render(
     <Router>
       <App>
         <Route exact path='/' component={Welcome}/>
+        <Route exact path='/search' component={Search}/>
         <Route exact path='/counter' component={Counter}/>
         <Route exact path='/stuff' component={Stuff}/>
         <Route exact path='/signup' component={Signup}/>
