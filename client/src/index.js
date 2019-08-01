@@ -14,6 +14,7 @@ import Signup from './containers/Signup';
 import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Import components
 import Welcome from './components/Welcome';
