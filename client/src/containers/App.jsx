@@ -7,20 +7,12 @@ import Search from '../components/Search/Search';
 export default ({ children }) => {
   return (
     <>
-      <Search />
       <NavBar />
-
+      <Search />
       <div className="container">
         <GoogleMap />
-
         {children}
       </div>
-
-      <div className = "container">
-          <Search/>
-      </div>
-
-
     </>
   )
 };
