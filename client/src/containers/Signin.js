@@ -3,6 +3,8 @@ import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { signin } from "../actions";
+import { Link } from 'react-router-dom';
+
 
 
 class Signin extends Component {
@@ -40,7 +42,7 @@ class Signin extends Component {
             component={this.renderInput}
             autoComplete='none'/>
         </fieldset>
-        <button>Signin</button>
+        <button><Link to='/map'>Signin</Link></button>
         <div>{this.props.errorMessage}</div>
       </form>
     );
