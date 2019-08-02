@@ -4,6 +4,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { signup } from "../actions";
 import validator from 'validator';
+import { Link } from 'react-router-dom';
 
 class Signup extends Component {
   renderErrors = ({ error, touched }) => {
@@ -55,7 +56,7 @@ class Signup extends Component {
             component={this.renderInput}
             autoComplete='none'/>
         </fieldset>
-        <button>Signup</button>
+        <button><Link to='/map'>Signup</Link></button>
       </form>
     )
   }
