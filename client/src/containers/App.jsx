@@ -3,12 +3,14 @@ import React from "react";
 import Maps from "./Maps";
 import NavBar from "./Navbar";
 import Search from "./Search";
+import Carousel from "./Carousel";
 export default ({ children }) => {
   return (
     <div>
       <NavBar />
       <Maps />
       <Search />
+      <Carousel />
       {children}
     </div>
   );
