@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Import components
 import Welcome from './components/Welcome';
+import Map from "./containers/Maps"
 
 import reducers from './reducers';
 import Search from './components/Search/Search';
@@ -40,12 +41,13 @@ ReactDOM.render(
       <App>
         <Route exact path='/' component={Welcome}/>
         <Route exact path='/search' component={Search}/>
-        <Route exact path='/counter' component={Counter}/>
+        <Route exact path='/count' component={Counter}/>
         <Route exact path='/stuff' component={Stuff}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
         <Route exact path='/todo' component={Todo}/>
+        <Route exact path='/map' component = {Map}/>
       </App>
     </Router>
   </Provider>
