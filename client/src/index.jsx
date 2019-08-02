@@ -19,9 +19,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // Import components
 import Welcome from './components/Welcome';
 import Map from "./containers/Maps"
-
 import reducers from './reducers';
-import Search from './components/Search/Search';
+import Search from './components/Search';
 
 // configure redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

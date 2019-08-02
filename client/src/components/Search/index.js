@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Search = () => {
+const index = () => {
     return (
         <div>
    <div className="input-group">
@@ -15,4 +15,4 @@ const Search = () => {
     )
 }
 
-export default Search;
+export default index;
