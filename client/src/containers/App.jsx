@@ -17,7 +17,7 @@ export default ({ children }) => {
       </div>
 
       <div className = "container">
-          <Search/>
+
       </div>
 
 
