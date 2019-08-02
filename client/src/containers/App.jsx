@@ -1,8 +1,8 @@
 
 import React from "react";
 import Maps from "./Maps";
-import NavBar from "../components//NavBar";
-import Search from "../components/Search/Search";
+import NavBar from "./Navbar";
+import Search from "./Search";
 export default ({ children }) => {
   return (
     <div>
