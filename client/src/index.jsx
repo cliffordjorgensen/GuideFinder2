@@ -19,10 +19,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 // Import components
+
 // import Welcome from './components/Welcome';
 
 import reducers from './reducers';
-import Search from './components/Search/Search';
+import Search from './components/Search';
 
 // configure redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -42,13 +43,12 @@ ReactDOM.render(
       <App>
         <Route exact path='/' component={Home}/>
         <Route exact path='/search' component={Search}/>
-        <Route exact path='/counter' component={Counter}/>
+        <Route exact path='/count' component={Counter}/>
         <Route exact path='/stuff' component={Stuff}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
         <Route exact path='/todo' component={Todo}/>
-        {/* <Route exact path='/map' component={Home}/> */}
       </App>
     </Router>
   </Provider>, 
