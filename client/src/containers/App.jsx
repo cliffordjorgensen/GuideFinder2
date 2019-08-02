@@ -1,26 +1,11 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import GoogleMap from '../components/GoogleMap';
-import Search from '../components/Search/Search';
 
-
-export default ({ children }) => {
+export default ({children}) => {
   return (
-    <>
-      <Search />
-      <NavBar />
-
-      <div className="container">
-        <GoogleMap />
-
-        {children}
-      </div>
-
-      <div className = "container">
-          <Search/>
-      </div>
-
-
-    </>
+    <div>
+      <NavBar/>
+      {children}
+    </div>
   )
 };

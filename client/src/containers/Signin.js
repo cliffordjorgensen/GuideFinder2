@@ -13,6 +13,10 @@ class Signin extends Component {
     });
   }
 
+  componentDidMount(){
+    console.log('hello from the signin component')
+  }
+
   renderInput = ({ input }) => {
     return <input {...input}/>;
   }

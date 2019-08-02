@@ -7,6 +7,7 @@ import reduxThunk from 'redux-thunk';
 import  './styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // Import Containers
+import Home from './containers/Home'
 import App from './containers/App.jsx';
 import Counter from './containers/Counter';
 import Stuff from './containers/Stuff';
@@ -16,8 +17,9 @@ import Signout from './containers/Signout';
 import Todo from './containers/Todo';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+
 // Import components
-import Welcome from './components/Welcome';
+// import Welcome from './components/Welcome';
 
 import reducers from './reducers';
 import Search from './components/Search/Search';
@@ -38,7 +40,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <App>
-        <Route exact path='/' component={Welcome}/>
+        <Route exact path='/' component={Home}/>
         <Route exact path='/search' component={Search}/>
         <Route exact path='/counter' component={Counter}/>
         <Route exact path='/stuff' component={Stuff}/>
@@ -46,7 +48,8 @@ ReactDOM.render(
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
         <Route exact path='/todo' component={Todo}/>
+        {/* <Route exact path='/map' component={Home}/> */}
       </App>
     </Router>
-  </Provider>
-  , document.getElementById('root'));
+  </Provider>, 
+  document.getElementById('root'));

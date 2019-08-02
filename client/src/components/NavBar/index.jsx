@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
-
+import {  NavDropdown } from 'react-bootstrap';
 
 const index = () => {
     return (
@@ -20,35 +20,29 @@ const index = () => {
                                 Profiles
                             </Link>
                         </li>
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle naturalWHite " data-toggle="dropdown" to="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">
-                                    <i className="fa fa-sign-in"></i>
-                                    Log In
-                            </Link>
-                            <div className="dropdown-menu HighlightGreen">
-                                <Link className="dropdown-item guide" to="/logIn">
-                                    Guide
+                        <li class="nav-item">
+                            <NavDropdown title="Log In" id="basic-nav-dropdown">
+                                <NavDropdown.Item>
+                                    <Link to = '/signin'>
+                                        Guide
                                     </Link>
-                            <div role="separator" className="dropdown-divider"></div>
-                                <Link className="dropdown-item traveler" to="/loginUser">
-                                    Traveler
-                                </Link>
-                            </div>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link to = '/map'>
+                                        Map
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item to ="/login/guide">User</NavDropdown.Item>
+                            </NavDropdown>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link naturalWHite" to="/contactUs">
-                            <i className="fa fa-id-badge"></i> 
-                            Contact us
+                                <i className="fa fa-id-badge"></i>
+                                Contact us
                             </Link>
                         </li>
                     </ul>
                 </div>
-
-
-                {/* <Link to="/profiles/">Profiles</Link>
-                <Link to="/logIn/">Log In</Link>
-                <Link to="/contactUs/">Contact Us</Link> */}
             </nav>
         </div>
     )
