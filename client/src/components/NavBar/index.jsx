@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+import React from 'react'
+import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
+import {  NavDropdown } from 'react-bootstrap';
 
 const index = () => {
   return (
@@ -38,19 +39,42 @@ const index = () => {
                 <Link className='dropdown-item guide' to='/logIn'>
                   Guide
                 </Link>
-                <div role='separator' className='dropdown-divider' />
-                <Link className='dropdown-item traveler' to='/loginUser'>
-                  Traveler
-                </Link>
-              </div>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link naturalWHite' to='/contactUs'>
-                <i className='fa fa-id-badge' />
-                Contact us
-              </Link>
-            </li>
-          </ul>
+
+
+
+                <div className="collapse navbar-collapse float-right" id="navbarText">
+                    <ul className="nav nav-pills">
+                        <li className="nav-item">
+                            <Link className="nav-link float-right naturalWHite" to="/profiles/">
+                                <i className="fa fa-users"></i>
+                                Profiles
+                            </Link>
+                        </li>
+                        <li class="nav-item">
+                            <NavDropdown title="Log In" id="basic-nav-dropdown">
+                                <NavDropdown.Item>
+                                    <Link to = '/signin'>
+                                        Guide
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link to = '/map'>
+                                        Map
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item to ="/login/guide">User</NavDropdown.Item>
+                            </NavDropdown>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link naturalWHite" to="/contactUs">
+                                <i className="fa fa-id-badge"></i>
+                                Contact us
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
         </div>
       </nav>
     </div>
