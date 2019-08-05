@@ -31,7 +31,7 @@ class Signup extends Component {
   onSubmit = formProps => {
     console.log(formProps);
     this.props.signup(formProps, () => {
-      this.props.history.push("/counter");
+      this.props.history.push("/profile");
     });
   };
 
@@ -40,7 +40,7 @@ class Signup extends Component {
     return (
       <div className = 'container'>
       <form onSubmit={handleSubmit(this.onSubmit)}>
-        <fieldset className="scheduler-border">
+        <fieldset>
           <Field
             name="email"
             type="text"
@@ -85,16 +85,6 @@ class Signup extends Component {
             autoComplete="none"
           />
         </fieldset>
-        {/* <Form>
-          <Form.Group controlId="formGroupEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
-          <Form.Group controlId="formGroupPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-        </Form> */}
         <div className="form-group">
           <p className="text-center">
             By signing up you accept our <Link to="#">Terms Of Use</Link>

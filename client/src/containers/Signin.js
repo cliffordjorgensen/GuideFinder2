@@ -9,9 +9,8 @@ import './style.css'
 
 class Signin extends Component {
   onSubmit = formValues => {
-    console.log(formValues)
     this.props.signin(formValues, () => {
-      this.props.history.push("/counter");
+      this.props.history.push("/profile");
     });
   };
 
