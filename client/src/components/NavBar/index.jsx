@@ -21,7 +21,7 @@ const index = () => {
                 Profiles
               </Link>
             </li>
-            <li class='nav-item'>
+            <li className='nav-item'>
               <NavDropdown title='Log In' id='basic-nav-dropdown'>
                 <NavDropdown.Item>
                   <Link to='/signin'>Guide</Link>
