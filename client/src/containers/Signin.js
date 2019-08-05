@@ -1,63 +1,71 @@
-import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { reduxForm, Field } from "redux-form";
+import { compose } from "redux";
+import { connect } from "react-redux";
 import { signin } from "../actions";
-import { Link } from 'react-router-dom';
-
-
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import './style.css'
 
 class Signin extends Component {
-
   onSubmit = formValues => {
+    console.log(formValues)
     this.props.signin(formValues, () => {
-      this.props.history.push('/counter');
+      this.props.history.push("/counter");
     });
-  }
+  };
 
-  componentDidMount(){
-    console.log('hello from the signin component')
-  }
-
-  renderInput = ({ input }) => {
-    return <input {...input}/>;
-  }
+  renderInput = ({ input, type }) => {
+    return <input type={type} {...input} />;
+  };
 
   render() {
-    console.log(this.props);
+    console.log('from signin', this.props);
     const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
-        <fieldset>
+        <fieldset className = 'my-fieldset'>
           <label>Email</label>
           <Field
-            name='email'
-            type='text'
-            label='Email'
+            name="email"
+            type="text"
+            label="Email"
             component={this.renderInput}
-            autoComplete='none'/>
+            autoComplete="none"
+            className="form-control"
+            aria-describedby="emailHelp"
+          />
         </fieldset>
         <fieldset>
           <label>Password</label>
           <Field
-            name='password'
-            type='password'
-            label='password'
+            name="password"
+            type="password"
+            label="password"
             component={this.renderInput}
-            autoComplete='none'/>
+            autoComplete="none"
+          />
         </fieldset>
-        <button><Link to='/map'>Signin</Link></button>
+        <button>Signin</button>
         <div>{this.props.errorMessage}</div>
+        <div>
+          <Link className="nav-link  naturalWHite" to="/signup/">
+            Guide Signup
+          </Link>
+        </div>
       </form>
     );
   }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return { errorMessage: state.auth.errorMessage };
 }
 
 export default compose(
-  connect(mapStateToProps, { signin }),
-  reduxForm({ form: 'signin' })
+  connect(
+    mapStateToProps,
+    { signin }
+  ),
+  reduxForm({ form: "signin" })
 )(Signin);
