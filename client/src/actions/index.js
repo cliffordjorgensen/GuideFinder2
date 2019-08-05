@@ -1,20 +1,6 @@
 import { AUTH_USER, AUTH_ERROR, ADD_TODO, TODO_ERROR, FETCH_TODOS, FETCH_USER, USER_ERROR} from "./types";
 import axios from 'axios';
 
-
-// export const incrementCounter = () => {
-//   return {
-//     type: INCREMENT_COUNTER
-//   };
-// };
-
-// export const decrementCounter = () => {
-//   return {
-//     type: DECREMENT_COUNTER
-//   };
-// };
-
-
 export const signup = (formProps, callback) => async dispatch => {
   try {
     const res = await axios.post('/api/auth/signup', formProps);
