@@ -1,16 +1,16 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from "../actions/types";
+// import { INCREMENT_COUNTER, DECREMENT_COUNTER } from "../actions/types";
 
-const INITIAL_STATE = {
-  counter: 52
-};
+// const INITIAL_STATE = {
+//   counter: 52
+// };
 
-export default function(state = INITIAL_STATE, action) {
-  switch(action.type) {
-    case INCREMENT_COUNTER:
-      return {...state, counter: state.counter + 1};
-    case DECREMENT_COUNTER:
-      return {...state, counter: state.counter - 1};
-    default:
-      return state;
-  }
-};
+// export default function(state = INITIAL_STATE, action) {
+//   switch(action.type) {
+//     case INCREMENT_COUNTER:
+//       return {...state, counter: state.counter + 1};
+//     case DECREMENT_COUNTER:
+//       return {...state, counter: state.counter - 1};
+//     default:
+//       return state;
+//   }
+// };

@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // Import Containers
 import Home from './containers/Home'
 import App from './containers/App.jsx';
-import Counter from './containers/Counter';
+import Profile from './containers/Profile';
 import Stuff from './containers/Stuff';
 import Signup from './containers/Signup';
 import Signin from './containers/Signin';
@@ -44,7 +44,7 @@ ReactDOM.render(
       <App>
         <Route exact path='/' component={Home}/>
         <Route exact path='/search' component={Search}/>
-        <Route exact path='/counter' component={Counter}/>
+        <Route exact path='/profile' component={Profile}/>
         <Route exact path='/stuff' component={Stuff}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/signin' component={Signin}/>
