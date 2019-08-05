@@ -5,12 +5,10 @@ import auth from './auth';
 import todo from './todo';
 import location from './location'
 
-
 export default combineReducers({
   auth,
   form,
   todo,
   counter,
   location
-
 });

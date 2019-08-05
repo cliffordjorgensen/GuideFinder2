@@ -15,6 +15,7 @@ import Signup from './containers/Signup';
 import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
+// import Profile from './components/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -43,11 +44,12 @@ ReactDOM.render(
       <App>
         <Route exact path='/' component={Home}/>
         <Route exact path='/search' component={Search}/>
-        <Route exact path='/count' component={Counter}/>
+        <Route exact path='/counter' component={Counter}/>
         <Route exact path='/stuff' component={Stuff}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
+        {/* <Route exact path='/profile' component={Profile}/> */}
         <Route exact path='/todo' component={Todo}/>
       </App>
     </Router>
