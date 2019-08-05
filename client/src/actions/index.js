@@ -1,4 +1,4 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER, AUTH_USER, AUTH_ERROR, ADD_TODO, TODO_ERROR, FETCH_TODOS} from "./types";
+import { INCREMENT_COUNTER, DECREMENT_COUNTER, AUTH_USER, AUTH_ERROR, ADD_TODO, TODO_ERROR, FETCH_TODOS } from "./types";
 import axios from 'axios';
 
 
@@ -75,7 +75,6 @@ export const addTodo = formValue => async dispatch => {
     dispatch({ type: TODO_ERROR, payload: 'Something went wrong'});
   }
 };
-
 
 
 
