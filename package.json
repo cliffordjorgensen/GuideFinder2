@@ -30,6 +30,7 @@
         "prop-types": "^15.7.2",
         "react-chat-widget": "^2.1.4-1",
         "react-geolocated": "^2.5.0",
+        "unirest": "^0.6.0",
         "validator": "^11.1.0"
     },
     "devDependencies": {
