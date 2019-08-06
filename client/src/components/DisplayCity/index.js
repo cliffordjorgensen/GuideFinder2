@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux"
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class Index extends Component {
     sendCurrentLoc = (e) => {
@@ -12,7 +12,7 @@ class Index extends Component {
             return this.props.cities.Results.map(city => {
                 return(
 
-                    <button onClick = {()=>{this.sendCurrentLoc({lat: city.lat, lng: city.lon})}} key = {city.zmw} >{city.name}</button>
+                    <li onClick = {()=>{this.sendCurrentLoc({lat: city.lat, lng: city.lon})}} key = {city.zmw} >{city.name}, {city.c}</li>
                 )
             })
         }
@@ -21,13 +21,11 @@ class Index extends Component {
     render() {
 
         return (
-            <div>
-                <p>Cities with the same name</p>
-                {this.eachCity()}
-
-
-
-
+            <div className="jumbotron">
+                <h4>Maybe you mean...</h4>
+                <ul>
+                    {this.eachCity()}
+                </ul>
             </div>
         );
     }
