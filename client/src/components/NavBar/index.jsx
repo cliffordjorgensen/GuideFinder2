@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import { NavDropdown } from "react-bootstrap";
 const index = () => {
   return (
     <div>
@@ -22,12 +21,10 @@ const index = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <NavDropdown title="Log In" id="basic-nav-dropdown">
-                <NavDropdown.Item>
-                  <Link to="/signin">Guide</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="/login/guide">User</NavDropdown.Item>
-              </NavDropdown>
+              <Link className="nav-link float-right naturalWHite" to="/signin">
+                <i className="fa fa-sign-in"/>
+                Log In
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link naturalWHite" to="/contactUs">
