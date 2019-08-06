@@ -49,7 +49,6 @@ ReactDOM.render(
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
-        {/* <Route exact path='/profile' component={Profile}/> */}
         <Route exact path='/todo' component={Todo}/>
       </App>
     </Router>

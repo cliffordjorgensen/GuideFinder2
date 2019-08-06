@@ -8,17 +8,18 @@
         "bootstrap": "^4.3.1",
         "font-awesome": "^4.7.0",
         "google-map-react": "^1.1.4",
+        "google-maps-react": "^1.1.4",
         "react": "^16.8.6",
         "react-bootstrap": "^1.0.0-beta.10",
         "react-dom": "^16.8.6",
+        "react-geolocated": "^2.5.0",
         "react-redux": "^7.1.0",
         "react-router-dom": "^5.0.1",
         "react-scripts": "3.0.1",
         "redux": "^4.0.4",
         "redux-form": "^8.2.5",
         "redux-thunk": "^2.3.0",
-        "validator": "^11.1.0",
-        "google-maps-react": "^1.1.4"
+        "validator": "^11.1.0"
     },
     "scripts": {
         "start": "react-scripts start",
