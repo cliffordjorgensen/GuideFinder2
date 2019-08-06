@@ -6,27 +6,42 @@ class Index extends Component {
     sendCurrentLoc = (e) => {
         console.log(e)
     }
-     eachCity () {
+    eachCity () {
         if (this.props.cities) {
             console.log(this.props.cities.Results)
             return this.props.cities.Results.map(city => {
                 return(
+                    <div key = {city.name}>
+                        <button onClick = {()=>{this.sendCurrentLoc({lat: city.lat, lng: city.lon})}} key = {city.zmw} className="btn btn-primary">{city.name}, {city.c}</button>
+                    </div>
 
-                    <li onClick = {()=>{this.sendCurrentLoc({lat: city.lat, lng: city.lon})}} key = {city.zmw} >{city.name}, {city.c}</li>
+
                 )
             })
         }
     }
 
+    renderCityList = () => {
+        if (this.props.cities){
+            return (
+                <div>
+                    <h4>Maybe you mean...</h4>
+                    {this.eachCity()}
+
+                </div>
+            )
+        }
+    }
+
+
+
     render() {
 
         return (
-            <div className="jumbotron">
-                <h4>Maybe you mean...</h4>
-                <ul>
-                    {this.eachCity()}
-                </ul>
+            <div>
+                {this.renderCityList()}
             </div>
+
         );
     }
 }

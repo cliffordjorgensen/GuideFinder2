@@ -17,9 +17,6 @@ export class MapContainer extends Component {
 
   render() {
     const mapStyles = {
-      marginTop: '200px',
-
-
       width: '70%',
       height: '70%',
     };
