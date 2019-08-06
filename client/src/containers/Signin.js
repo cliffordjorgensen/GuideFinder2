@@ -4,8 +4,8 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import { signin } from "../actions";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import './style.css'
+import "font-awesome/css/font-awesome.min.css";
+import "./style.css";
 
 class Signin extends Component {
   onSubmit = formValues => {
@@ -19,11 +19,11 @@ class Signin extends Component {
   };
 
   render() {
-    console.log('from signin', this.props);
+    console.log("from signin", this.props);
     const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
-        <fieldset className = 'my-fieldset'>
+        <fieldset className="my-fieldset">
           <label>Email</label>
           <Field
             name="email"
@@ -45,12 +45,18 @@ class Signin extends Component {
             autoComplete="none"
           />
         </fieldset>
-        <button>Signin</button>
+        <button className="nav-link float-left naturalWHite"> <i className="fa fa-sign-in" aria-hidden="true" />
+          Signin
+          </button>
         <div>{this.props.errorMessage}</div>
+        <br/>
         <div>
-          <Link className="nav-link  naturalWHite" to="/signup/">
-            Guide Signup
-          </Link>
+          <button>
+            <Link className="nav-link float-left naturalWHite" to="/signup">
+              <i className="fa fa-paper-plane" aria-hidden="true" />
+              Sign Up
+            </Link>
+          </button>
         </div>
       </form>
     );
