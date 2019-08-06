@@ -17,38 +17,37 @@ class Profile extends Component {
 
     return (
       <div>
-        {/* <h1>Counter</h1>
-        <p>Counter: {this.props.counter}</p>
-        <button onClick={this.props.incrementCounter}>Increment</button>
-        <button onClick={this.props.decrementCounter}>Decrement</button> */}
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
           <h4 id="fat">
             <div className="jumbotron mt-3 bg-white pl-3 ml-3 mr-3 pt-3 pb-3 mb-5">
-              <img
-                src=""
-                className="rounded float-right col-md-4 border-secondary"
-                alt=""
-              />
-              <p>
-                <strong>Email: {this.props.email}</strong>
-              </p>
-              <p>
-                <strong>Age: {this.props.age} </strong>
-              </p>
-              <p>
-                <strong>
-                  Years of experience: {this.props.yearsOfExperience}
-                </strong>
-              </p>
-              <p>
-                <strong>Activities:{this.props.activities} </strong>
-              </p>
-              <p>
-                <strong>City: {this.props.city}</strong>
-              </p>
-              <p>
-                <strong>Description: {this.props.descriptionActivity}</strong>
-              </p>
+              <div>
+                <img
+                  src= {this.props.photoLink}
+                  alt={this.props.name}
+                  className="rounded float-right col-md-4 border-secondary"
+                />
+                <p>
+                  <strong>Email: {this.props.email}</strong>
+                </p>
+                <p>
+                  <strong>Age: {this.props.age} </strong>
+                </p>
+                <p>
+                  <strong>
+                    Years of experience: {this.props.yearsOfExperience}
+                  </strong>
+                </p>
+                <p>
+                  <strong>Activities:{this.props.activities} </strong>
+                </p>
+                <p>
+                  <strong>City: {this.props.city}</strong>
+                </p>
+                <p>
+                  <strong>About Me: {this.props.aboutMe}</strong>
+                </p>
+              </div>
+              <br />
               <div>
                 <Button variant="primary" size="lg" to="#" block>
                   Chat
@@ -57,7 +56,6 @@ class Profile extends Component {
                   Edit Profile
                 </Button>
               </div>
-              <br />
             </div>
           </h4>
         </div>
@@ -67,7 +65,15 @@ class Profile extends Component {
 }
 
 function mapStateToProps({ user }) {
-  return { email: user.email, age: user.age, yearsOfExperience: user.yearsOfExperience, activities: user.activities, city: user.city};
+  return {
+    email: user.email,
+    age: user.age,
+    yearsOfExperience: user.yearsOfExperience,
+    activities: user.activities,
+    city: user.city,
+    photoLink: user.photoLink,
+    aboutMe: user.aboutMe
+  };
 }
 
 export default requireAuth(

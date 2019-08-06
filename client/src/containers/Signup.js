@@ -7,7 +7,6 @@ import validator from "validator";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 class Signup extends Component {
   renderErrors = ({ error, touched }) => {
     if (touched && error) {
@@ -38,60 +37,87 @@ class Signup extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <div className = 'container'>
-      <form onSubmit={handleSubmit(this.onSubmit)}>
-        <fieldset>
+      <div className="container">
+        <form onSubmit={handleSubmit(this.onSubmit)}>
+          <fieldset>
+            <Field
+              name="email"
+              type="text"
+              label="Email"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
+            <Field
+              name="password"
+              type="password"
+              label="Password"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
+            <Field
+              name="photolink"
+              type="text"
+              label="Photo Link"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
+            <Field
+              name="age"
+              type="text"
+              label="Age"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
+            <Field
+              name="city"
+              type="text"
+              label="City"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
+            <Field
+              name="activities"
+              type="text"
+              label="activities"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
+            <Field
+              name="aboutMe"
+              type="text"
+              label="About me"
+              component={this.renderInput}
+              autoComplete="none"
+            />
+          </fieldset>
+          <fieldset>
           <Field
-            name="email"
+            name="yearsOfExperience"
             type="text"
-            label="Email"
+            label="Years of Experience"
             component={this.renderInput}
             autoComplete="none"
           />
         </fieldset>
-        <fieldset>
-          <Field
-            name="password"
-            type="password"
-            label="Password"
-            component={this.renderInput}
-            autoComplete="none"
-          />
-        </fieldset>
-        <fieldset>
-          <Field
-            name="photolink"
-            type="text"
-            label="Photo Link"
-            component={this.renderInput}
-            autoComplete="none"
-          />
-        </fieldset>
-        <fieldset>
-          <Field
-            name="age"
-            type="text"
-            label="Age"
-            component={this.renderInput}
-            autoComplete="none"
-          />
-        </fieldset>
-        <fieldset>
-          <Field
-            name="city"
-            type="text"
-            label="City"
-            component={this.renderInput}
-            autoComplete="none"
-          />
-        </fieldset>
-        <div className="form-group">
-          <p className="text-center">
-            By signing up you accept our <Link to="#">Terms Of Use</Link>
-          </p>
-        </div>
-        <button>Signup</button>
-      </form>
+          <div className="form-group">
+            <p className="text-center">
+              By signing up you accept our <Link to="#">Terms Of Use</Link>
+            </p>
+          </div>
+          <button>Signup</button>
+        </form>
       </div>
     );
   }

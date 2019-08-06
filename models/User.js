@@ -33,8 +33,18 @@ const UserSchema = new Schema({
   city: {
     type: String
   },
-  description: {
+  aboutMe: {
     type: String
+  },
+  photoLink: {
+     data: Buffer, 
+     type: String 
+  },
+  longitude:{
+    type: Number
+  }, 
+  latitude:{
+    type: Number
   },
   todos: [
     {
