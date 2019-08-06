@@ -20,14 +20,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 // Import components
-<<<<<<< HEAD
 import Welcome from './components/Welcome';
 import ContactUs from './components/ContactUs';
-=======
 
 // import Welcome from './components/Welcome';
 
->>>>>>> b4c68cfb3f7cf1eb9a1641d0f67cb778e8b1965d
 import reducers from './reducers';
 import Search from './components/Search';
 
