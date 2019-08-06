@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> fb608a03a1b949e19095b4aadbd563d93568edd2
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -21,8 +21,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Import components
 import ContactUs from './components/ContactUs';
-
-// import Welcome from './components/Welcome';
 import reducers from './reducers';
 import Search from './components/Search';
 
