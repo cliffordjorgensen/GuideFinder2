@@ -3,10 +3,10 @@ const unirest = require("unirest");
 module.exports={
     searchCity: (req, res) => {
 
-        console.log(req.body);
+
 
         const incomingReq = unirest("GET", "https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php");
-        console.log(req.body.location)
+
         incomingReq.query({
             "location": req.body.location
         });
@@ -17,7 +17,7 @@ module.exports={
         });
 
         incomingReq.end(function (incomingRes) {
-            console.log("Anything");
+
             if (incomingRes.error) {
                 return res.json({error: incomingRes.error})
             }

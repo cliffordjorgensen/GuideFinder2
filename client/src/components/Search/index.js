@@ -19,6 +19,7 @@ class index extends Component  {
     onSubmit (e) {
         e.preventDefault()
         this.props.fetchCity(this.state.city)
+        this.setState({city: ''})
 
     }
 
