@@ -20,6 +20,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 // Import components
+import Welcome from './components/Welcome';
+import ContactUs from './components/ContactUs';
 
 // import Welcome from './components/Welcome';
 
@@ -50,6 +52,7 @@ ReactDOM.render(
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
         <Route exact path='/todo' component={Todo}/>
+        <Route exact path='/contactus' component={ContactUs}/>
       </App>
     </Router>
   </Provider>, 
