@@ -1,11 +1,13 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-export default ({children}) => {
+import Widget from '../components/Chat';
+
+export default ({ children }) => {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       {children}
+      <Widget />
     </div>
-  )
+  );
 };
-

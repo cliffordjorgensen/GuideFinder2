@@ -28,6 +28,7 @@
         "passport-jwt": "^4.0.0",
         "passport-local": "^1.0.0",
         "prop-types": "^15.7.2",
+        "react-chat-widget": "^2.1.4-1",
         "react-geolocated": "^2.5.0",
         "validator": "^11.1.0"
     },

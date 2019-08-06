@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import NavBar from "../components/NavBar";
+import React, { Component } from 'react';
+import NavBar from '../components/NavBar';
 export default class Navbar extends Component {
   render() {
     return (
@@ -9,3 +9,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+<Navbar />;
