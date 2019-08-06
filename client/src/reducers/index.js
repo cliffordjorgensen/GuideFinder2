@@ -4,6 +4,8 @@ import auth from './auth';
 import todo from './todo';
 import user from './user'
 import location from './location'
+import searchReducer from "./searchReducer";
+
 
 
 export default combineReducers({
@@ -11,5 +13,6 @@ export default combineReducers({
   form,
   todo,
   user,
-  location
+  location,
+  searchReducer
 });
