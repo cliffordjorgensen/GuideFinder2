@@ -5,3 +5,5 @@ export const TODO_ERROR = 'TODO_ERROR';
 export const FETCH_TODOS = 'FETCH_TODOS';
 export const FETCH_USER = 'FETCH_USER';
 export const USER_ERROR = 'USER_ERROR';
+export const FETCH_LOCATION= "FETCH_LOCATION";
+
