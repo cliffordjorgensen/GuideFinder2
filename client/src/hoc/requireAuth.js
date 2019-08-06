@@ -22,8 +22,8 @@ export default ChildComponent => {
     }
   }
 
-  function mapStateToProps({ auth }) {
-    return { auth: auth.authenticated };
+  function mapStateToProps({ auth, guideAuth}) {
+    return { auth: auth.authenticated};
   }
   return connect(mapStateToProps, null)(ComposedComponent);
 }

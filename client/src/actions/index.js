@@ -1,19 +1,5 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER, AUTH_USER, AUTH_ERROR, ADD_TODO, TODO_ERROR, FETCH_TODOS } from "./types";
+import { AUTH_USER, AUTH_ERROR, ADD_TODO, TODO_ERROR, FETCH_TODOS, FETCH_USER, USER_ERROR} from "./types";
 import axios from 'axios';
-
-
-export const incrementCounter = () => {
-  return {
-    type: INCREMENT_COUNTER
-  };
-};
-
-export const decrementCounter = () => {
-  return {
-    type: DECREMENT_COUNTER
-  };
-};
-
 
 export const signup = (formProps, callback) => async dispatch => {
   try {
@@ -26,6 +12,7 @@ export const signup = (formProps, callback) => async dispatch => {
   }
 };
 
+
 export const signin = (formProps, callback) => async dispatch => {
   try {
     const res = await axios.post('/api/auth/signin', formProps);
@@ -37,6 +24,8 @@ export const signin = (formProps, callback) => async dispatch => {
   }
 };
 
+
+
 export const signout = () => {
   localStorage.removeItem('token');
   return {
@@ -46,15 +35,15 @@ export const signout = () => {
 };
 
 
-export const fetchTodos = () => async dispatch => {
+export const fetchUser = () => async dispatch => {
   try {
-    const response = await axios.get('/api/todo', {
+    const response = await axios.get('/api/user', {
       headers: { authorization: localStorage.getItem('token')}
     });
 
-    dispatch({ type: FETCH_TODOS, payload: response.data.todos });
+    dispatch({ type: FETCH_USER, payload: response.data.user });
   } catch(e) {
-    dispatch({ type: TODO_ERROR, payload: 'Something bad happened' });
+    dispatch({ type: USER_ERROR, payload: 'Something bad happened' });
   }
 }
 
@@ -76,6 +65,17 @@ export const addTodo = formValue => async dispatch => {
   }
 };
 
+export const fetchTodos = () => async dispatch => {
+  try {
+    const response = await axios.get('/api/todo', {
+      headers: { authorization: localStorage.getItem('token')}
+    });
+
+    dispatch({ type: FETCH_TODOS, payload: response.data.todos });
+  } catch(e) {
+    dispatch({ type: TODO_ERROR, payload: 'Something bad happened' });
+  }
+}
 
 
 
