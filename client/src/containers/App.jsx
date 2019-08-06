@@ -1,14 +1,14 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-// import GoogleMap from '../components/GoogleMap';
-// import Search from '../components/Search/Search';
+import Widget from '../components/Chat';
 
-export default ({children}) => {
+export default ({ children }) => {
+
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       {children}
+      <Widget />
     </div>
-  )
+  );
 };
-
