@@ -4,7 +4,8 @@ import axios from "axios";
 export const fetchMatch = coords => async dispatch =>{
     try{
         const response = await axios.post('/api/match', {
-            coords : coords
+            lat : coords.lat,
+            lng: coords.lng
         })
         dispatch({ type: FETCH_USER_GUIDE_MATCH, payload: response.data});
     } catch (err) {

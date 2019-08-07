@@ -91,7 +91,9 @@ class Index extends Component {
         }
         else if (this.state.currentLoc === true){
             this.props.fetchMatch({lat: this.state.current.lat, lng: this.state.current.lng})
-
+            return(
+                <div>Check console</div>
+            )
         }
 
 
