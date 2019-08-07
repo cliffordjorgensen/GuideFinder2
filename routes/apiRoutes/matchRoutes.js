@@ -4,6 +4,6 @@ const passportService = require('./../../services/passport');
 const authMiddleware = require('./../../middlewares/authMiddlewares');
 
 router.route('/')
-    .get(matchController.getMatch)
+    .post(matchController.getMatch)
 
 module.exports = router
