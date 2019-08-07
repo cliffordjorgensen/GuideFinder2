@@ -19,23 +19,23 @@ const index = (props) => {
                         <td>Adam Hydorn</td>
                         <td>hydorn.adam@gmail.com</td>
                         <td>
-                            <a href=" https://ahydorn.github.io/responsive-portfolio/index.html">ahydorn.github.io/responsive-portfolio/</a>
+                            <a href=" https://ahydorn.github.io/responsive-portfolio/index.html" target='_blank'>ahydorn.github.io/responsive-portfolio/</a>
                        </td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>  
-                        <td>Clifford Jorgensen</td>
-                        <td>cliffordjorgensen@gmail.com</td>
-                        <td>
-                        <a href="https://github.com/cliffordjorgensen">github.com/cliffordjorgensen</a>
-                        </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Badri Vasistha</td>
                         <td>badri.vasistha@gmail.com</td>
                         <td>
-                        <a href="https://badvasistha.github.io/Portfolio/">badvasistha.github.io/Portfolio/</a>
+                        <a href="https://badvasistha.github.io/Portfolio/" target='_blank'>badvasistha.github.io/Portfolio/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>  
+                        <td>Clifford Jorgensen</td>
+                        <td>cliffordjorgensen@gmail.com</td>
+                        <td>
+                        <a href="https://github.com/cliffordjorgensen" target='_blank'>github.com/cliffordjorgensen</a>
                         </td>
                     </tr>
                     <tr>
@@ -43,7 +43,7 @@ const index = (props) => {
                         <td>Deepesh Nagarkoti</td>
                         <td>deepesh.nagarkoti@gmail.com</td>
                         <td> 
-                        <a href="https://depeace.github.io/basic-portfolio/">depeace.github.io/basic-portfolio/</a>
+                        <a href="https://depeace.github.io/basic-portfolio/" target='_blank'>depeace.github.io/basic-portfolio/</a>
                         </td>
                     </tr>
                     <tr>
@@ -51,7 +51,7 @@ const index = (props) => {
                         <td>Michael Jiang</td>
                         <td>mjlikre@gmail.com</td>
                         <td>
-                        <a href="https://github.com/mjlikre">github.com/mjlikre</a>
+                        <a href="https://github.com/mjlikre" target='_blank'>github.com/mjlikre</a>
                         </td>
                     </tr>
                 </tbody>

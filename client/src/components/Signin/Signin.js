@@ -25,10 +25,10 @@ const Signin = () => {
           />
         </div>
         <div>
-        <Link
-                className='nav-link float-right naturalWHite'
-                to='/profiles/'
-              >Guide Signup</Link>
+          <Link
+            className='nav-link float-right naturalWhite'
+            to='/profiles/'
+          >Guide Signup</Link>
         </div>
       </form>
     </div>
