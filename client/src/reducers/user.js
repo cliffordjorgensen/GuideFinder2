@@ -14,6 +14,7 @@ const INITIAL_STATE = {
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
     case USER_ERROR:
+      console.log(action.payload)
       return {...state, errorMessage: action.payload };
     case FETCH_USER:
       return {...state, email: action.payload.email, age: action.payload.age, yearsOfExperience: action.payload.yearsOfExperience, activities: action.payload.activities,

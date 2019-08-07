@@ -10,6 +10,14 @@ const validateEmail = function(email) {
 };
 
 const UserSchema = new Schema({
+  lat: {
+    type: String,
+    required: true
+  },
+  lng: {
+    type: String,
+    required: true
+  },
   email: {
     type: String,
     unique: true,
@@ -39,12 +47,6 @@ const UserSchema = new Schema({
   photoLink: {
      data: Buffer, 
      type: String 
-  },
-  longitude:{
-    type: Number
-  }, 
-  latitude:{
-    type: Number
   },
   todos: [
     {

@@ -11,10 +11,11 @@ import Home from './containers/Home'
 import App from './containers/App.jsx';
 import Profile from './containers/Profile';
 import Stuff from './containers/Stuff';
-import Signup from './containers/Signup';
+import UserDestination from './components/UserDestination'
 import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
+import GuideLocation from './components/GuideLocation'
 // import Profile from './components/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -44,11 +45,16 @@ ReactDOM.render(
         <Route exact path='/search' component={Search}/>
         <Route exact path='/profile' component={Profile}/>
         <Route exact path='/stuff' component={Stuff}/>
-        <Route exact path='/signup' component={Signup}/>
+
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
         <Route exact path='/todo' component={Todo}/>
         <Route exact path='/contactus' component={ContactUs}/>
+        <Route exact path='/guideloc' component={GuideLocation}/>
+        <Route exact path='/destinationr' component={UserDestination}/>
+
+
+
       </App>
     </Router>
   </Provider>, 

@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Link} from "react-router-dom";
 
 const Signin = () => {
   return (
@@ -25,10 +26,11 @@ const Signin = () => {
           />
         </div>
         <div>
-          <Link
-            className='nav-link float-right naturalWhite'
-            to='/profiles/'
-          >Guide Signup</Link>
+
+        <Link
+                className='nav-link float-right naturalWHite'
+                to='/guideloc'
+              >Guide Signup</Link>
         </div>
       </form>
     </div>
