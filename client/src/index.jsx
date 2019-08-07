@@ -11,7 +11,7 @@ import Home from './containers/Home'
 import App from './containers/App.jsx';
 import Profile from './containers/Profile';
 import Stuff from './containers/Stuff';
-
+import UserDestination from './components/UserDestination'
 import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
@@ -51,6 +51,9 @@ ReactDOM.render(
         <Route exact path='/todo' component={Todo}/>
         <Route exact path='/contactus' component={ContactUs}/>
         <Route exact path='/guideloc' component={GuideLocation}/>
+        <Route exact path='/destinationr' component={UserDestination}/>
+
+
 
       </App>
     </Router>
