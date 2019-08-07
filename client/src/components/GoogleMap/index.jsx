@@ -17,11 +17,13 @@ export class MapContainer extends Component {
 
   render() {
     const mapStyles = {
-      width: '70%',
-      height: '70%',
+      width: 'auto',
+      height: '50%',
+      margin: '3% 3% 3% 3%',
+      borderRadius: '3%'
     };
     return (
-        <div>
+        <div className= 'map'>
 
 
           <Map
