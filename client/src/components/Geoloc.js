@@ -16,7 +16,7 @@ class Geoloc extends Component {
         }
         return (
             <div>
-                <p>We're Currently using your location to load the map</p>
+        
                 <GoogleMap position = {position}/>
 
             </div>
