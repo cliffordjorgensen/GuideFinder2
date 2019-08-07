@@ -11,11 +11,13 @@ const tokenForUser = function(user) {
   return jwt.encode({ sub: user.id, iat: timestamp}, config.secret);
 };
 
+let incomingReq = {}
 
 module.exports = {
   signUp: async (req, res) => {
-    console.log("hello from controller")
-    const { email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, longitude, latitude } = req.body;
+    console.log(req)
+    const { lat, lng,email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, longitude, latitude } = req.body;
+    console.log(email)
     if(!email || !password) {
       return res.status(422).json({ error: 'You must provide an email and password' });
     }
@@ -26,7 +28,7 @@ module.exports = {
       if(existingUser) {
         return res.status(422).json({ error: 'Email is in use' });
       }
-      const user = new db.User({ email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, longitude, latitude});
+      const user = new db.User({ lat, lng, email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, longitude, latitude});
       await user.save();
       res.json({ token: tokenForUser(user)});
     } catch(e) {
@@ -36,4 +38,5 @@ module.exports = {
   signIn: (req, res) => {
     res.send({ token: tokenForUser(req.user)});
   }
+
 };

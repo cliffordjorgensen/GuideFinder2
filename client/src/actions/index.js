@@ -2,6 +2,7 @@ import { AUTH_USER, AUTH_ERROR, ADD_TODO, TODO_ERROR, FETCH_TODOS, FETCH_USER, U
 import axios from 'axios';
 
 export const signup = (formProps, callback) => async dispatch => {
+  console.log(formProps)
   try {
     const res = await axios.post('/api/auth/signup', formProps);
     dispatch({ type: AUTH_USER, payload: res.data.token });

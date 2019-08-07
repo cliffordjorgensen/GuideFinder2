@@ -1,4 +1,5 @@
-import { FETCH_LOCATION } from "./types";
+import {FETCH_LOCATION} from "./types";
+
 
 export const fetchLocation = location  => dispatch => {
 
@@ -7,3 +8,4 @@ export const fetchLocation = location  => dispatch => {
         payload: location
     })
 };
+

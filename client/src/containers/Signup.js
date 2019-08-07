@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Signup extends Component {
+
   renderErrors = ({ error, touched }) => {
     if (touched && error) {
       return (
@@ -28,13 +29,16 @@ class Signup extends Component {
   };
 
   onSubmit = formProps => {
-    console.log(formProps);
-    this.props.signup(formProps, () => {
+    const data = {...this.props.coords, ...formProps}
+
+
+    this.props.signup(data, () => {
       this.props.history.push("/profile");
     });
   };
 
   render() {
+
     const { handleSubmit } = this.props;
     return (
       <div className="container">
@@ -129,7 +133,7 @@ function mapStateToProps(state) {
 
 const validate = formValues => {
   const errors = {};
-  console.log("validator", formValues);
+
 
   if (!formValues.email) {
     errors.email = "You must enter an email";
