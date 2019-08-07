@@ -3,6 +3,7 @@ const authRoutes  = require('./authRoutes');
 const todoRoutes =  require('./todoRoutes');
 const userRoutes = require('./userRoutes')
 const searchCityRoutes = require('./searchCityRoutes');
+const matchRoutes = require('./matchRoutes');
 
 const passportService = require('./../../services/passport');
 
@@ -17,6 +18,7 @@ router.route('/test')
 router.use('/auth', authRoutes);
 router.use('/todo', todoRoutes);
 router.use('/user', userRoutes );
-router.use('/search', searchCityRoutes)
+router.use('/search', searchCityRoutes);
+router.use('/match', matchRoutes)
 
 module.exports = router;

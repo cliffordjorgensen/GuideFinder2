@@ -2,7 +2,7 @@ import { FETCH_CITY, FETCH_CITY_ERROR } from './types'
 import axios from "axios";
 
 export const fetchCity = city => async dispatch => {
-    console.log(city)
+
     try {
         const response = await axios.post('/api/search', {
             location: city

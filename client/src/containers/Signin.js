@@ -19,7 +19,7 @@ class Signin extends Component {
   };
 
   render() {
-    console.log("from signin", this.props);
+
     const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
@@ -52,7 +52,7 @@ class Signin extends Component {
         <br/>
         <div>
           <button>
-            <Link className="nav-link float-left naturalWHite" to="/signup">
+            <Link className="nav-link float-left naturalWHite" to="/guideloc">
               <i className="fa fa-paper-plane" aria-hidden="true" />
               Sign Up
             </Link>

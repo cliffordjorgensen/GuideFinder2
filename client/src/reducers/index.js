@@ -5,6 +5,7 @@ import todo from './todo';
 import user from './user'
 import location from './location'
 import searchReducer from "./searchReducer";
+import match from "./matchReducer"
 
 
 
@@ -14,5 +15,7 @@ export default combineReducers({
   todo,
   user,
   location,
-  searchReducer
+  searchReducer,
+  match
+
 });
