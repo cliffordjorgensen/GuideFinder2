@@ -22,13 +22,19 @@ class Index extends Component {
 
         const r = window.confirm(`Are you sure you're location is ${e.name}, ${e.country}?`)
         if (r === true){
-            console.log("hey")
-            this.setState({currentLoc: true, current: {...e} })
+            console.log(e.lat, e.lng)
+            // this.setState({current: {...e} })
+
+            this.props.fetchMatch({lat: e.lat, lng: e.lng})
+            console.log(this.match)
+            // this.setState({currentLoc: true})
+
+
         }
 
 
     }
-    eachCity () {
+    eachCity() {
         if (this.props.cities && this.state.currentLoc === false) {
             return this.props.cities.Results.map(city => {
                 return(
@@ -57,10 +63,6 @@ class Index extends Component {
 
     }
 
-
-
-
-
     renderCityList = () => {
 
         if (this.props.cities){
@@ -86,15 +88,14 @@ class Index extends Component {
                     {this.renderCityList()}
                 </div>
 
-
             );
         }
-        else if (this.state.currentLoc === true){
-            this.props.fetchMatch({lat: this.state.current.lat, lng: this.state.current.lng})
+        else{
             return(
-                <div>Check console</div>
+                <div>this is it!!!</div>
             )
         }
+
 
 
     }
@@ -102,6 +103,8 @@ class Index extends Component {
 
 const mapStateToProps = state => ({
     cities: state.searchReducer.city,
+    matched: state.matchReducer.matched,
+    matchedError: state.matchReducer.matchError
 
 })
 

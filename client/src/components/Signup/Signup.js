@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { guideSignup } from "../actions";
+import { userSignup } from "../../actions";
 import validator from "validator";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -28,12 +28,13 @@ class Signup extends Component {
   };
 
   onSubmit = formProps => {
-    const data = { userType: 'guide', ...this.props.coords, ...formProps };
+    const data = {userType: "user", ...formProps}
 
-    this.props.guideSignup(data, () => {
+    this.props.userSignup(data, () => {
       this.props.history.push("/profile");
     });
   };
+
 
   render() {
     const { handleSubmit } = this.props;
@@ -116,15 +117,7 @@ class Signup extends Component {
                       autoComplete="none"
                     />
                   </fieldset>
-                  <fieldset>
-                    <Field
-                      name="yearsOfExperience"
-                      type="text"
-                      label="Years of Experience"
-                      component={this.renderInput}
-                      autoComplete="none"
-                    />
-                  </fieldset>
+
                   <div className="form-group">
                     <p className="text-center">
                       By signing up you accept our{" "}
@@ -143,7 +136,10 @@ class Signup extends Component {
 }
 
 function mapStateToProps(state) {
-  return { errorMessage: state.auth.errorMessage };
+  return {
+    errorMessage: state.auth.errorMessage,
+    auth: state.auth.authenticated
+  };
 }
 
 const validate = formValues => {
@@ -169,7 +165,7 @@ const validate = formValues => {
 export default compose(
   connect(
     mapStateToProps,
-    { guideSignup }
+    { userSignup }
   ),
   reduxForm({
     form: "signup",

@@ -10,13 +10,15 @@ const validateEmail = function(email) {
 };
 
 const UserSchema = new Schema({
-  lat: {
+  userName: {
     type: String,
     required: true
   },
+  lat: {
+    type: String
+  },
   lng: {
-    type: String,
-    required: true
+    type: String
   },
   email: {
     type: String,
@@ -45,9 +47,13 @@ const UserSchema = new Schema({
     type: String
   },
   photoLink: {
-     data: Buffer, 
      type: String 
   },
+  userType: {
+    type: String,
+    required: true
+  },
+
   todos: [
     {
       ref: "Todo",

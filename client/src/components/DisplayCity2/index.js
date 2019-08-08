@@ -80,6 +80,7 @@ class Index extends Component {
 
 
     render() {
+        console.log(this.props);
         if(this.state.currentLoc===false){
             return (
                 <div>
