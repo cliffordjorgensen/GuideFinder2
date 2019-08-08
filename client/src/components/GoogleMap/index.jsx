@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-
-
 export class MapContainer extends Component {
 
   displayMarkers = () => {
@@ -19,7 +17,6 @@ export class MapContainer extends Component {
       height: '40%',
       margin: '3% 3% 3% 3%',
       borderRadius: '3%'
-      
     };
     return (
         <div>
