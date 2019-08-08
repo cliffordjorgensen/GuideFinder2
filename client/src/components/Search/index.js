@@ -21,7 +21,7 @@ class index extends Component {
   }
   render() {
     return (
-      <div>
+      <div id='search-bar'>
         <form onSubmit={this.onSubmit}>
           <div className='input-group'>
             <input
@@ -36,9 +36,9 @@ class index extends Component {
               onChange={this.onChange}
             />
             <div className='input-group-append' id='button-addon4'>
-              <button className='btn btn-outline-secondary' type='button'>
+              {/* <button className='btn btn-outline-secondary' type='button'>
                 Filters
-              </button>
+              </button> */}
               <button className='btn btn-success' type='submit'>
                 Submit
               </button>
