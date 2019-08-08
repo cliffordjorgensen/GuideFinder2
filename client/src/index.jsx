@@ -16,6 +16,8 @@ import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
 import GuideLocation from './components/GuideLocation'
+import Signup from './containers/Signup'
+
 
 import UserSignup from './components/Signup/Signup'
 
@@ -36,6 +38,7 @@ const store = createStore(
   composeEnhancers(applyMiddleware(reduxThunk))
 );
 
+
 ReactDOM.render(
   <Provider store={store}>
     <Router>
@@ -46,6 +49,8 @@ ReactDOM.render(
         <Route exact path='/stuff' component={Stuff}/>
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/signout' component={Signout}/>
+        <Route exact path='/signup' component={Signup}/>
+        <Route exact path='/usersignup' component={UserSignup}/>
         <Route exact path='/todo' component={Todo}/>
         <Route exact path='/contactus' component={ContactUs}/>
         <Route exact path='/guideloc' component={GuideLocation}/>
