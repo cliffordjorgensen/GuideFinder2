@@ -19,25 +19,21 @@ class Signin extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <div className="container mt-5">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-md-5 mx-auto">
-            <div id="first">
-              <div className="myform form ">
-                <form onSubmit={handleSubmit(this.onSubmit)}>
-                  <fieldset className="my-fieldset">
-                    <label>Email</label>
-                    <Field
+          <div className="col-sm-6 offset-md-3">
+                <form  onSubmit={handleSubmit(this.onSubmit)}>
+                  <div className='form-group'>
+                    <label>    Email Address  </label>
+               <Field
                       name="email"
-                      type="text"
+                      type="email"
                       label="Email"
                       component={this.renderInput}
                       autoComplete="none"
                       className="form-control"
                       aria-describedby="emailHelp"
                     />
-                  </fieldset>
-                  <fieldset>
                     <label>Password</label>
                     <Field
                       name="password"
@@ -46,7 +42,6 @@ class Signin extends Component {
                       component={this.renderInput}
                       autoComplete="none"
                     />
-                  </fieldset>
                   <button className="btn btn-block tx-tfm navyBlue text-white">
                     {" "}
                     <i className="fa fa-sign-in" aria-hidden="true" />
@@ -65,12 +60,11 @@ class Signin extends Component {
                       </Link>
                     </button>
                   </div>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     );
   }
 }
