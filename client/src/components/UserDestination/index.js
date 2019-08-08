@@ -16,6 +16,10 @@ class Index extends Component {
 
 
     render() {
+        const cardStyles = {
+            width: '18rem',
+
+        };
         if(this.props.match.matched) {
             this.currentState = true
         }
@@ -38,12 +42,12 @@ class Index extends Component {
                 console.log(match)
 
                 return(
-                    <div className="card" >
+                    <div className="card" style={cardStyles}>
                         <img className="card-img-top" src={match.__v} alt="Card image cap"/>
                         <div className="card-body">
                             <h5 className="card-title">Name: {match.userName}</h5>
                             <h5 className="card-title">City: {match.city}</h5>
-                            <p className="card-text">{match.userName} is a {match.age} guide in {match.city} with {match.yearsOfExperience} in the business, and he will be happy to be your tour guide in your trip to {match.city}</p>
+                            <p className="card-text">{match.userName} is a {match.age} years old guide in {match.city} with {match.yearsOfExperience} in the business. In his own words, he claims himself to be "{match.aboutMe}", and he will be happy to be your tour guide in your trip to {match.city}</p>
                             <a href="#" className="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>

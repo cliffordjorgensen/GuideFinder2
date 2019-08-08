@@ -29,6 +29,7 @@ class Signup extends Component {
   onSubmit = formProps => {
 
     const data = { userType: 'guide', ...this.props.coords, ...formProps };
+    console.log(data)
 
     this.props.guideSignup(data, () => {
 
@@ -46,7 +47,7 @@ class Signup extends Component {
                 <form onSubmit={handleSubmit(this.onSubmit)}>
                   <fieldset>
                     <Field
-                        name="name"
+                        name="userName"
                         type="text"
                         label="Name"
                         component={this.renderInput}
