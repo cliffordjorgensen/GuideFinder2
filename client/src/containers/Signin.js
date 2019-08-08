@@ -13,11 +13,9 @@ class Signin extends Component {
       this.props.history.push("/profile");
     });
   };
-
   renderInput = ({ input, type }) => {
     return <input type={type} {...input} />;
   };
-
   render() {
     const { handleSubmit } = this.props;
     return (
@@ -76,11 +74,9 @@ class Signin extends Component {
     );
   }
 }
-
 function mapStateToProps(state) {
   return { errorMessage: state.auth.errorMessage };
 }
-
 export default compose(
   connect(
     mapStateToProps,

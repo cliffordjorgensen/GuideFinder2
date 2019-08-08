@@ -12,20 +12,17 @@ export class MapContainer extends Component {
       lng: this.props.position.lng
     }}
                    onClick={() => console.log("You clicked me!")} />
-
   }
-
   render() {
     const mapStyles = {
       width: 'auto',
-      height: '50%',
+      height: '40%',
       margin: '3% 3% 3% 3%',
       borderRadius: '3%'
+      
     };
     return (
-        <div className= 'map'>
-
-
+        <div>
           <Map
               google={this.props.google}
               zoom={8}
@@ -34,14 +31,10 @@ export class MapContainer extends Component {
           >
             {this.displayMarkers()}
           </Map>
-
         </div>
     );
   }
 }
-
-
-
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBAQv_VajKKxKQTr1tw-PpDaMhV30n_D-c'
 })(MapContainer);

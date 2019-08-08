@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { connect } from 'react-redux';
 import GoogleMap from "../components/GoogleMap";
 
 class Maps extends Component {

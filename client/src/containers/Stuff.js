@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 class Stuff extends Component {
   render() {
     return (
@@ -10,9 +9,7 @@ class Stuff extends Component {
     )
   }
 }
-
 function mapStateToProps({ counter }) {
   return { counter: counter.counter };
 }
-
 export default connect(mapStateToProps, null)(Stuff);

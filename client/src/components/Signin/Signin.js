@@ -26,7 +26,6 @@ const Signin = () => {
           />
         </div>
         <div>
-
         <Link
                 className='nav-link float-right naturalWHite'
                 to='/guideloc'

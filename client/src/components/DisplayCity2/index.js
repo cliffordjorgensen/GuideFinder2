@@ -4,29 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import GoogleMap from '../GoogleMap2'
 import Signup from "../../containers/Signup"
 
-
 class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
             currentLoc : false,
             current: {}
-
         }
-
     }
-
-
-
     changeCurrentLoc = (e) => {
-
         const r = window.confirm(`Are you sure you're location is ${e.name}, ${e.country}?`)
         if (r === true){
             console.log("hey")
             this.setState({currentLoc: true, current: {...e} })
         }
-
-
     }
     eachCity () {
         if (this.props.cities && this.state.currentLoc === false) {
@@ -37,56 +28,37 @@ class Index extends Component {
                     </div>
                 )
             })
-
         }
-
     }
     eachCoords () {
         if (this.props.cities && this.state.currentLoc === false) {
             const allCoords = this.props.cities.Results.map(city => {
                 const coords = []
                 coords.push({lat: city.lat, lng: city.lon})
-
                 return coords
             })
             return(
                 <GoogleMap coordinates = {allCoords}/>
             )
-
         }
-
     }
-
-
-
-
-
     renderCityList = () => {
-
         if (this.props.cities){
-
             return (
                 <div>
                     <h4>Maybe you mean...</h4>
                     {this.eachCity()}
                     {this.eachCoords()}
-
                 </div>
             )
         }
-
     }
-
-
-
     render() {
         if(this.state.currentLoc===false){
             return (
                 <div>
                     {this.renderCityList()}
                 </div>
-
-
             );
         }
         else if (this.state.currentLoc === true){
@@ -95,13 +67,9 @@ class Index extends Component {
                 <Signup coords = {{lat: this.state.current.lat, lng : this.state.current.lng}}/>
             )
         }
-
-
     }
 }
-
 const mapStateToProps = state => ({
     cities: state.searchReducer.city
 })
-
 export default connect(mapStateToProps, null)(Index);
