@@ -11,13 +11,13 @@ const tokenForUser = function(user) {
   return jwt.encode({ sub: user.id, iat: timestamp}, config.secret);
 };
 
-let incomingReq = {}
+
 
 module.exports = {
-  signUp: async (req, res) => {
+  userSignup: async (req, res) => {
     console.log(req)
-    const { lat, lng,email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, longitude, latitude } = req.body;
-    console.log(email)
+    const { userName, email, password, age, activities, city, aboutMe, photoLink, userType } = req.body;
+
     if(!email || !password) {
       return res.status(422).json({ error: 'You must provide an email and password' });
     }
@@ -28,7 +28,28 @@ module.exports = {
       if(existingUser) {
         return res.status(422).json({ error: 'Email is in use' });
       }
-      const user = new db.User({ lat, lng, email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, longitude, latitude});
+      const user = new db.User({ userName, email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, userType });
+      await user.save();
+      res.json({ token: tokenForUser(user)});
+    } catch(e) {
+      res.status(404).json({ e });
+    }
+  },
+  signUp: async (req, res) => {
+    console.log(req)
+    const { userName, lat, lng, email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, userType } = req.body;
+
+    if(!email || !password) {
+      return res.status(422).json({ error: 'You must provide an email and password' });
+    }
+    try {
+      // Check if theres existing user
+      const existingUser = await db.User.findOne({ email });
+      // if user exist, throw error
+      if(existingUser) {
+        return res.status(422).json({ error: 'Email is in use' });
+      }
+      const user = new db.User({ userName, lat, lng, email, password, age, yearsOfExperience, activities, city, aboutMe, photoLink, userType });
       await user.save();
       res.json({ token: tokenForUser(user)});
     } catch(e) {

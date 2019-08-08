@@ -22,6 +22,9 @@ class Profile extends Component {
                   className="rounded float-right col-md-4 border-secondary"
                 />
                 <p>
+                  <strong>Name: {this.props.userName}</strong>
+                </p>
+                <p>
                   <strong>Email: {this.props.email}</strong>
                 </p>
                 <p>
@@ -60,6 +63,7 @@ class Profile extends Component {
 }
 function mapStateToProps({ user }) {
   return {
+    userName: user.userName,
     email: user.email,
     age: user.age,
     yearsOfExperience: user.yearsOfExperience,
@@ -67,6 +71,7 @@ function mapStateToProps({ user }) {
     city: user.city,
     photoLink: user.photoLink,
     aboutMe: user.aboutMe
+
   };
 }
 export default requireAuth(

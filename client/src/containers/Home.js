@@ -1,9 +1,9 @@
 import React from 'react';
 import Demo from './../components/Demo';
 import Search from '../components/Search';
-import Dropdown from "../components/DisplayCity2";
-// import Carousel from "../components/Carousel"
-import "./style.css"
+import Dropdown from '../components/DisplayCity2';
+import Carousel from '../components/Carousel';
+import './style.css';
 
 export default () => {
   return (
@@ -11,7 +11,9 @@ export default () => {
       <Demo />
       <Search />
       <Dropdown />
-      {/* <Carousel /> */}
+      <div>
+        <Carousel />
+      </div>
     </div>
   );
 };

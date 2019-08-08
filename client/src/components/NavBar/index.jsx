@@ -27,11 +27,18 @@ const index = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link naturalWHite" to="/destinationr">
+                <i className="fa fa-id-badge" />
+                User Actions
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link naturalWHite" to="/contactUs">
                 <i className="fa fa-id-badge" />
                 Contact us
               </Link>
             </li>
+
           </ul>
         </div>
       </nav>

@@ -6,8 +6,8 @@ export default ({ children }) => {
   return (
     <div>
       <NavBar />
-      {children}
       <Widget />
+      {children}
     </div>
   );
 };

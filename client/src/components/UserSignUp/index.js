@@ -1,18 +1,15 @@
 import React, {Component} from 'react';
-import Search from "../Search"
-
-import DisplayCity from '../DisplayCity2/index'
-
-
+import Signup from '../../components/Signup'
 
 class Index extends Component {
     render() {
         return (
             <div>
-                <Search/>
-                <DisplayCity/>
+                <Signup/>
+
             </div>
         );
     }
 }
+
 export default Index;
