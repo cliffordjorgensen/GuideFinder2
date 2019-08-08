@@ -3,8 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const carouselStyles = {
-  position: 'absolute',
-  margin: '1000px',
+
   align: 'center'
 };
 
