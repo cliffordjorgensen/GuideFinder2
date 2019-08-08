@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-
-
 export class MapContainer extends Component {
-
   displayMarkers = () => {
       return this.props.coordinates.map(coord =>{
           return(
@@ -13,14 +10,9 @@ export class MapContainer extends Component {
                       lng: coord[0].lng
                   }}/>
               )
-
       })
-
-
-    //                onClick={() => console.log("You clicked me!")} />
-
+    //onClick={() => console.log("You clicked me!")} />
   }
-
   render() {
     const mapStyles = {
       width: '70%',
@@ -28,8 +20,6 @@ export class MapContainer extends Component {
     };
     return (
         <div>
-
-
           <Map
               google={this.props.google}
               zoom={4}
@@ -38,14 +28,10 @@ export class MapContainer extends Component {
           >
             {this.displayMarkers()}
           </Map>
-
         </div>
     );
   }
 }
-
-
-
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBAQv_VajKKxKQTr1tw-PpDaMhV30n_D-c'
 })(MapContainer);

@@ -19,7 +19,6 @@ class index extends Component {
     e.preventDefault();
     this.props.fetchCity(this.state.city);
   }
-
   render() {
     return (
       <div>
@@ -50,7 +49,6 @@ class index extends Component {
     );
   }
 }
-
 export default connect(
   null,
   { fetchCity }

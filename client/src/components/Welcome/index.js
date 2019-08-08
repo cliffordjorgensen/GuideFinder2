@@ -31,7 +31,6 @@ class Welcome extends Component {
     );
   }
 }
-
 function mapStateToProps({ auth }) {
   return { auth: auth.authenticated };
 }

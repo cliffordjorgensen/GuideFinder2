@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Search from "../Search"
 import DisplayCity from '../DisplayCity2'
-
-
 class Index extends Component {
     render() {
         return (
@@ -13,5 +11,4 @@ class Index extends Component {
         );
     }
 }
-
 export default Index;

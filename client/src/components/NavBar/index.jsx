@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "font-awesome/css/font-awesome.min.css";
-import "./NavBar.module.css"
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "font-awesome/css/font-awesome.min.css";
 const index = () => {
   return (
     <div>

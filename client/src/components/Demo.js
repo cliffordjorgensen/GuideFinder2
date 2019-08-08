@@ -3,7 +3,6 @@ import { geolocated } from "react-geolocated";
 import Geoloc from "./../components/Geoloc"
 
 class Demo extends React.Component {
-
     render() {
         return (
             <div>
@@ -12,7 +11,6 @@ class Demo extends React.Component {
         );
     }
 }
-
 export default geolocated({
     positionOptions: {
         enableHighAccuracy: false,

@@ -3,9 +3,12 @@ import SearchBar from '../components/Search';
 
 export default class Search extends Component {
   render() {
+    const searchStyle = {
+      width: '50%'
+    }
     return (
       <div>
-        <SearchBar />
+        <SearchBar style={searchStyle} />
       </div>
     )
   }
