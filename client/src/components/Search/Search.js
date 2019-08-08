@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-
 export default class Search extends Component {
     handleClick = (event) => {
         event.preventDefault();
@@ -10,9 +8,8 @@ export default class Search extends Component {
       }
     render() {
         console.log(this.props)
-        
         return (
-            <div>
+            <div >
                 <div class="input-group">
                     <input type="text" class="form-control" id="search-term" placeholder="Search term" aria-label="traveler search term" aria-describedby="button-addon4" />
                     <div class="input-group-append" id="button-addon4">
@@ -21,7 +18,6 @@ export default class Search extends Component {
                     </div>
                 </div>
             </div>
-
         )
     }
 }

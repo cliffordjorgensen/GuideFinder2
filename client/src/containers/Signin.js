@@ -19,6 +19,7 @@ class Signin extends Component {
 
   };
 
+
   // componentDidMount() {
   //   this.props.fetchUser();
   //   if(this.props.user.user) {
@@ -31,6 +32,7 @@ class Signin extends Component {
   };
 
   stateManage = 0
+
 
 
   render() {
@@ -104,7 +106,6 @@ class Signin extends Component {
 
   }
 }
-
 function mapStateToProps(state) {
   return {
     errorMessage: state.auth.errorMessage,
@@ -112,7 +113,6 @@ function mapStateToProps(state) {
     user: state.fetchU
   };
 }
-
 export default compose(
   connect(
     mapStateToProps,

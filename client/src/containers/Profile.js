@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import { incrementCounter, decrementCounter } from "./../actions";
 import { fetchUser } from "../actions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import requireAuth from "../hoc/requireAuth";
-
-// import { Link } from "react-router-dom";
-
 class Profile extends Component {
   componentDidMount() {
     this.props.fetchUser();
   }
   render() {
     console.log("Counters props", this.props);
-
     return (
       <div>
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
@@ -66,7 +61,6 @@ class Profile extends Component {
     );
   }
 }
-
 function mapStateToProps({ user }) {
   return {
     userName: user.userName,
@@ -80,7 +74,6 @@ function mapStateToProps({ user }) {
 
   };
 }
-
 export default requireAuth(
   connect(
     mapStateToProps,

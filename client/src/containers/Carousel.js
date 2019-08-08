@@ -4,12 +4,9 @@ export class Carousel extends Component {
   render() {
     return (
       <div>
-        <div className="container">
-          <guideCarousel />
-        </div>
+        <guideCarousel />
       </div>
     )
   }
 }
-
 export default Carousel

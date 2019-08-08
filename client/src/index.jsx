@@ -16,18 +16,18 @@ import Signin from './containers/Signin';
 import Signout from './containers/Signout';
 import Todo from './containers/Todo';
 import GuideLocation from './components/GuideLocation'
+
 import UserSignup from './components/Signup/Signup'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 // Import components
 import ContactUs from './components/ContactUs';
 import reducers from './reducers';
 import Search from './components/Search';
-
 // configure redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 const store = createStore(
   reducers,
   {
@@ -50,7 +50,9 @@ ReactDOM.render(
         <Route exact path='/contactus' component={ContactUs}/>
         <Route exact path='/guideloc' component={GuideLocation}/>
         <Route exact path='/destinationr' component={UserDestination}/>
+
         <Route exact path='/usersignup' component={UserSignup}/>
+
 
       </App>
     </Router>

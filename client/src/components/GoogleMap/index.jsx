@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-
-
 export class MapContainer extends Component {
 
   displayMarkers = () => {
@@ -12,18 +10,16 @@ export class MapContainer extends Component {
       lng: this.props.position.lng
     }}
                    onClick={() => console.log("You clicked me!")} />
-
   }
-
   render() {
     const mapStyles = {
-      width: '70%',
-      height: '70%',
+      width: 'auto',
+      height: '40%',
+      margin: '3% 3% 3% 3%',
+      borderRadius: '3%'
     };
     return (
         <div>
-
-
           <Map
               google={this.props.google}
               zoom={8}
@@ -32,14 +28,10 @@ export class MapContainer extends Component {
           >
             {this.displayMarkers()}
           </Map>
-
         </div>
     );
   }
 }
-
-
-
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBAQv_VajKKxKQTr1tw-PpDaMhV30n_D-c'
 })(MapContainer);

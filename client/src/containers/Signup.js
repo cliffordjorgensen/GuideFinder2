@@ -26,15 +26,15 @@ class Signup extends Component {
       </div>
     );
   };
-
   onSubmit = formProps => {
+
     const data = { userType: 'guide', ...this.props.coords, ...formProps };
 
     this.props.guideSignup(data, () => {
+
       this.props.history.push("/profile");
     });
   };
-
   render() {
     const { handleSubmit } = this.props;
     return (
@@ -141,31 +141,25 @@ class Signup extends Component {
     );
   }
 }
-
 function mapStateToProps(state) {
   return { errorMessage: state.auth.errorMessage };
 }
-
 const validate = formValues => {
   const errors = {};
 
   if (!formValues.email) {
     errors.email = "You must enter an email";
   }
-
   if (formValues.email) {
     if (!validator.isEmail(formValues.email)) {
       errors.email = "You must enter a valid email address";
     }
   }
-
   if (!formValues.password) {
     errors.password = "You must enter a password";
   }
-
   return errors;
 };
-
 export default compose(
   connect(
     mapStateToProps,

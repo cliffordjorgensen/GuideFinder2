@@ -17,7 +17,6 @@ export default class index extends Component {
               />
             </Col>
           </Form.Group>
-
           <Form.Group as={Row} controlId='formPlaintextPassword'>
             <Form.Label column sm='2'>
               Password

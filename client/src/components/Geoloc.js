@@ -3,9 +3,7 @@ import { fetchLocation } from "./../actions/locationAction"
 import { connect } from 'react-redux';
 import GoogleMap from './GoogleMap'
 
-
 class Geoloc extends Component {
-
     render() {
         const position = {
             lat: this.props.coords && this.props.coords.latitude,
@@ -16,15 +14,10 @@ class Geoloc extends Component {
         }
         return (
             <div>
-                <p>We're Currently using your location to load the map</p>
                 <GoogleMap position = {position}/>
-
             </div>
         )
-
     }
 }
-
-
 export default connect(null, { fetchLocation })(Geoloc);
 

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Search from "../Search"
+
 import DisplayCity from '../DisplayCity2/index'
+
 
 
 class Index extends Component {
@@ -13,5 +15,4 @@ class Index extends Component {
         );
     }
 }
-
 export default Index;

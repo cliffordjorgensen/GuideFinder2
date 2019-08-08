@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import DisplayCity from "../DisplayCity2/user"
 import Search from "../Search/index"
 import { connect } from "react-redux";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -52,16 +53,15 @@ class Index extends Component {
 
         }
 
+
     }
 }
-
 const mapStateTpProps = state =>({
     match: state.matchReducer.match,
+
     matchError: state.matchReducer.matchError,
 
 
 })
-
-
 
 export default connect(mapStateTpProps, null)(Index);
