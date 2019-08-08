@@ -31,7 +31,7 @@ class Signup extends Component {
     const data = {userType: "user", ...formProps}
 
     this.props.userSignup(data, () => {
-      this.props.history.push("/profile");
+      this.props.route.push("/home");
     });
   };
 

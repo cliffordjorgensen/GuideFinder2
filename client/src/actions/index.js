@@ -4,7 +4,7 @@ import axios from 'axios';
 export const userSignup = (formProps, callback) => async dispatch => {
   console.log(formProps)
   try {
-    const res = await axios.post('/api/auth/signup/user', formProps);
+    const res = await axios.post('/api/auth/user', formProps);
     dispatch({ type: AUTH_USER, payload: res.data.token });
     localStorage.setItem('token', res.data.token);
     callback();

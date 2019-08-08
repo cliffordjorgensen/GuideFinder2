@@ -19,7 +19,7 @@ class Index extends Component {
             this.setState({currentLoc: true, current: {...e} })
         }
     }
-    eachCity () {
+    eachCity() {
         if (this.props.cities && this.state.currentLoc === false) {
             return this.props.cities.Results.map(city => {
                 return(
@@ -73,4 +73,6 @@ class Index extends Component {
 const mapStateToProps = state => ({
     cities: state.searchReducer.city
 })
+
+
 export default connect(mapStateToProps, null)(Index);

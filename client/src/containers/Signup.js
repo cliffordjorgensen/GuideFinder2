@@ -32,7 +32,7 @@ class Signup extends Component {
     console.log(data)
 
     this.props.guideSignup(data, () => {
-
+      console.log(this.props)
       this.props.history.push("/profile");
     });
   };
