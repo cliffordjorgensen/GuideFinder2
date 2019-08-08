@@ -7,7 +7,7 @@ const authMiddleware = require('./../../middlewares/authMiddlewares');
 
 router.route('/')
   .get(authMiddleware.requireAuth, userController.getUser)
-//   .post(authMiddleware.requireAuth, todoController.createTodo)
+  // .post(authMiddleware.requireAuth, todoController.createTodo)
 
 
 module.exports = router;
