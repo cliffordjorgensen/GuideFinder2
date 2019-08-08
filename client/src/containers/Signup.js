@@ -134,6 +134,7 @@ function mapStateToProps(state) {
 }
 const validate = formValues => {
   const errors = {};
+
   if (!formValues.email) {
     errors.email = "You must enter an email";
   }
